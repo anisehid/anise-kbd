@@ -30,6 +30,8 @@ Keyboards cannot describe but current DESC, need to extend description format to
 - (nearfuture) anise-ergodox: ergodox like layout
 - (nearfuture) anise-corne: ergodox like layout
 
+------------------
 TODO expand and add following point to README:
 - DIY a split keyboard is eaiser than even a 60% keyboard(30cmx10cm), split keyboard case can be printed by smaller 3D printer, and usually got fewer key.
-- 
+- Research on split keyboard and RSI.
+- Traditionaly layout and ortholinear layout, comparison
