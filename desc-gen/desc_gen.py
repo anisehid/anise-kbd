@@ -344,7 +344,7 @@ pef_desc = {
     "conn_def": default_conndef_wi2c,
 }
 
-def gen_desc(name, desc, stab_type="plate", r4lshift=False, six2right=False):
+def gen_desc(name, desc, stab_type="plate", r4lshift=False, six2right=False, hole_version="v1"):
     assert "layout" in desc
     assert "num_rc" in desc
     assert "key_matrix" in desc
@@ -363,11 +363,12 @@ def gen_desc(name, desc, stab_type="plate", r4lshift=False, six2right=False):
     desc["stab_type"] = stab_type
     desc["r4lshift" ] = r4lshift
     desc["six2right"] = six2right
+    desc["hole_version"] = hole_version
     with open("desc/" + name + ".json", "w") as f: json.dump(desc, f)
 
 if __name__ == "__main__":
     gen_desc("anise60b", default_desc, "plate")
-    gen_desc("anise60bnav", dnav_desc, "plate")
+    gen_desc("anise60bnav", dnav_desc, "plate", hole_version="v2")
     gen_desc("anise60hh", hh_desc, "plate")
     gen_desc("anise60mn", mn_desc, "plate", r4lshift=True)
     gen_desc("anise60mj", mj_desc, "plate", r4lshift=True)
